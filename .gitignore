@@ -1,0 +1,4 @@
+*.swp
+*.swo
+/vendor
+/node_modules
