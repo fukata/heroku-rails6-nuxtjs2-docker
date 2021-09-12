@@ -30,7 +30,9 @@ services:
       DB_PASSWORD: 'testtest'
       DB_PORT: '5432'
       RAILS_ENV: 'development'
+      WEB_DOMAIN: 'localhost:8080'
     volumes:
+      - ./api:/app
       - bundle-data:/app/vendor/bundle
     depends_on:
       - db
@@ -39,10 +41,12 @@ services:
       - '8080:3000'
     environment:
       NODE_ENV: 'development'
+      API_URL: 'http://localhost:3000'
     build:
       context: ./web
       dockerfile: Dockerfile
     volumes:
+      - ./web:/app
       - node_modules-data:/app/node_modules
     depends_on:
       - api
