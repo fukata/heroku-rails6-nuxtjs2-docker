@@ -4,6 +4,9 @@ setup:
       as: DATABASE
   config:
     RAILS_ENV: production
+    NODE_ENV: production
+    RAILS_LOG_TO_STDOUT: enabled
+    RAILS_SERVE_STATIC_FILES: enabled
 build:
   docker:
     web: web/Dockerfile
