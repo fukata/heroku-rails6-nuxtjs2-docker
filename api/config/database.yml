@@ -87,4 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: heroku_sample_production
+  url: <%= ENV['DATABASE_URL'] %>
