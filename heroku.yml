@@ -19,5 +19,5 @@ release:
     - bundle exec rake db:migrate
   image: api
 run:
-  web: yarn run build && yarn run start
+  web: yarn run start
   api: bundle exec puma -C config/puma.rb
