@@ -36,5 +36,13 @@ module Api
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Permit cross origin
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins ENV['WEB_DOMAIN'].to_s
+        resource "*", headers: :any, methods: [:get, :post, :options, :head]
+      end
+    end
   end
 end
