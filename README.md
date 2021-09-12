@@ -37,6 +37,11 @@ docker-compose exec api bin/rake db:reset
 
 ## 本番環境（heroku）
 
+ここでは仮にheroku上のアプリ名を下記としています。各自の環境に合わせて変更してください。
+
+- api: myapp-api
+- web: myapp-web
+
 ### セットアップ
 
 #### api アプリ
