@@ -12,7 +12,7 @@ release:
   command:
     - bundle exec rake db:setup
     - bundle exec rake db:migrate
-  image: worker
+  image: api
 run:
   web: yarn run dev
   api: bundle exec rails server -b 0.0.0.0
