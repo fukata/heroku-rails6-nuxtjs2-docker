@@ -1,5 +1,7 @@
 FROM ruby:3.0.2-bullseye
 
+ARG RAILS_ENV=production
+
 RUN mkdir /app
 
 WORKDIR /app

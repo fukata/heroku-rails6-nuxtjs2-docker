@@ -29,6 +29,7 @@ services:
       DB_USERNAME: 'postgres'
       DB_PASSWORD: 'testtest'
       DB_PORT: '5432'
+      RAILS_ENV: 'development'
     volumes:
       - bundle-data:/app/vendor/bundle
     depends_on:
@@ -36,6 +37,8 @@ services:
   web:
     ports:
       - '8080:3000'
+    environment:
+      NODE_ENV: 'development'
     build:
       context: ./web
       dockerfile: Dockerfile
