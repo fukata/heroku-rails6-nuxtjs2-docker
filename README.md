@@ -51,7 +51,7 @@ docker-compose exec api bin/rake db:reset
     cd api
     heroku apps:create myapp-api
     git init
-    git add remote heroku-api ${herokuのリポジトリURL}
+    git remote add heroku-api ${herokuのリポジトリURL}
     ```
 2. stackの変更
     ```
@@ -77,7 +77,7 @@ docker-compose exec api bin/rake db:reset
     cd web
     heroku apps:create myapp-web
     git init
-    git add remote heroku-web ${herokuのリポジトリURL}
+    git remote add heroku-web ${herokuのリポジトリURL}
     ```
 2. stackの変更
     ```
